@@ -1,0 +1,242 @@
+---
+layout: default
+title: "Vigía Tizón — Anticipar para proteger"
+---
+<header class="site-header">
+  <a class="brand" href="#inicio" aria-label="Vigía Tizón, inicio">
+    <span class="brand-mark" aria-hidden="true">V</span>
+    <span>vigía<span class="brand-accent">.</span></span>
+  </a>
+  <nav class="main-nav" aria-label="Navegación principal">
+    <a href="#datos">Datos</a>
+    <a href="#metodo">Metodología</a>
+    <a href="#modelo">Modelo</a>
+    <a href="#equipo">Equipo</a>
+  </nav>
+  <a class="header-cta" href="#modelo">Explorar el modelo <span aria-hidden="true">↗</span></a>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="live-dot"></span> Ciencia de datos para una agricultura resiliente</p>
+      <h1>Anticipar el tizón.<br><span>Proteger la cosecha.</span></h1>
+      <p class="hero-intro">Exploramos cómo los datos meteorológicos y las observaciones de campo pueden ayudar a estimar el riesgo de expansión del tizón tardío del tomate.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#metodo">Conoce el proyecto <span aria-hidden="true">↓</span></a>
+        <a class="text-link" href="#datos">Ver fuentes de datos <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-proof">
+        <span class="proof-icon" aria-hidden="true">✳</span>
+        <p><strong>Un proyecto de investigación aplicada</strong><br>Datos abiertos · aprendizaje automático · prevención</p>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Tomato_late_blight_fruit_rot_%285816739820%29.jpg" alt="Tomate con lesiones de tizón tardío causadas por Phytophthora infestans" fetchpriority="high">
+      <div class="photo-credit">Síntomas de tizón tardío · <a href="https://commons.wikimedia.org/wiki/File:Tomato_late_blight_fruit_rot_(5816739820).jpg" target="_blank" rel="noreferrer">Scot Nelson / Wikimedia Commons · CC0</a></div>
+      <div class="image-note"><span class="note-spark" aria-hidden="true">✳</span><span><strong>Phytophthora infestans</strong><small>Un riesgo que se mueve con el clima</small></span></div>
+      <div class="hero-index">01 <span>/</span> 04</div>
+    </div>
+    <a class="scroll-cue" href="#problema"><span aria-hidden="true">↓</span> Desliza para explorar</a>
+  </section>
+
+  <section class="intro-section section-pad" id="problema">
+    <div class="section-kicker"><span>01</span><span class="kicker-line"></span><span>El desafío</span></div>
+    <div class="intro-grid">
+      <h2>Una enfermedad.<br><span>Muchas variables.</span></h2>
+      <div class="intro-copy">
+        <p>El tizón tardío es causado por el oomiceto <em>Phytophthora infestans</em>. En condiciones favorables, puede propagarse rápidamente y afectar hojas, tallos y frutos.</p>
+        <p>Vigía Tizón propone combinar registros de ocurrencia con variables meteorológicas para estudiar dónde podría aumentar el riesgo. Es una herramienta de apoyo a la vigilancia, no un diagnóstico ni un sustituto de la inspección en campo.</p>
+        <a class="text-link dark-link" href="https://doi.org/10.1111/j.1364-3703.2007.00465.x" target="_blank" rel="noreferrer">Conocer la biología del patógeno <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="stat-strip">
+      <div><span class="stat-number">01</span><span class="stat-label">Patógeno<br>de interés</span></div>
+      <div><span class="stat-number">SVM</span><span class="stat-label">Modelo de<br>clasificación propuesto</span></div>
+      <div><span class="stat-number">Abiertos</span><span class="stat-label">Datos para una<br>ciencia reproducible</span></div>
+      <div><span class="stat-number">Local</span><span class="stat-label">Enfoque de riesgo<br>en zonas cercanas</span></div>
+    </div>
+  </section>
+
+  <section class="data-section section-pad" id="datos">
+    <div class="section-kicker"><span>02</span><span class="kicker-line"></span><span>Datos públicos</span></div>
+    <div class="section-heading-row">
+      <div>
+        <h2>La evidencia empieza<br>con <span>buenos datos.</span></h2>
+      </div>
+      <p class="section-lede">Fuentes abiertas que pueden integrarse para estudiar ocurrencias y condiciones ambientales. Cada registro requiere revisión antes de usarse como etiqueta de entrenamiento.</p>
+    </div>
+    <div class="data-cards">
+      <article class="data-card data-card-featured">
+        <div class="card-topline"><span class="data-icon" aria-hidden="true">⌖</span><span class="data-tag">Ocurrencias biológicas</span></div>
+        <h3>GBIF</h3>
+        <p>Registros de presencia publicados por instituciones y observadores. Consultar <em>Phytophthora infestans</em> y descargar ocurrencias con fecha y coordenadas.</p>
+        <a href="https://www.gbif.org/occurrence/search?taxon_key=3203716" target="_blank" rel="noreferrer">Explorar ocurrencias <span aria-hidden="true">↗</span></a>
+        <small>La calidad, el hospedante y la precisión espacial varían entre registros; filtrar y documentar cada descarga.</small>
+      </article>
+      <article class="data-card">
+        <div class="card-topline"><span class="data-icon weather-icon" aria-hidden="true">☼</span><span class="data-tag">Variables ambientales</span></div>
+        <h3>NASA POWER</h3>
+        <p>Series meteorológicas globales disponibles por coordenadas y periodo para construir variables ambientales diarias.</p>
+        <a href="https://power.larc.nasa.gov/docs/services/api/" target="_blank" rel="noreferrer">Ver documentación API <span aria-hidden="true">↗</span></a>
+        <small>Revisar resolución, cobertura y variables disponibles para cada región.</small>
+      </article>
+      <article class="data-card">
+        <div class="card-topline"><span class="data-icon weather-icon" aria-hidden="true">↗</span><span class="data-tag">Clima histórico</span></div>
+        <h3>Open-Meteo</h3>
+        <p>API abierta de datos históricos y reanálisis meteorológico, útil para explorar lluvia, temperatura y humedad relativa.</p>
+        <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank" rel="noreferrer">Consultar API histórica <span aria-hidden="true">↗</span></a>
+        <small>Confirmar licencia y condiciones de atribución antes de redistribuir datos derivados.</small>
+      </article>
+    </div>
+    <div class="dataset-note"><span aria-hidden="true">i</span><p><strong>Una nota sobre las etiquetas:</strong> una ocurrencia de GBIF no siempre es una confirmación de infección en tomate ni un evento de expansión. La curación taxonómica, temporal y espacial es esencial antes de entrenar.</p></div>
+  </section>
+
+  <section class="method-section section-pad" id="metodo">
+    <div class="section-kicker"><span>03</span><span class="kicker-line"></span><span>De los datos a la señal</span></div>
+    <div class="section-heading-row method-heading">
+      <h2>Un flujo claro,<br><span>de principio a fin.</span></h2>
+      <p class="section-lede">El preprocesamiento define qué aprende el modelo. Cada paso debe quedar versionado y ser reproducible.</p>
+    </div>
+    <div class="process-flow">
+      <article class="process-step">
+        <span class="step-number">01</span><span class="step-symbol" aria-hidden="true">⌕</span>
+        <h3>Curar y cruzar</h3>
+        <p>Normalizar nombres y fechas; eliminar duplicados y coordenadas inválidas. Vincular cada observación con clima de su ubicación y ventana temporal.</p>
+      </article>
+      <article class="process-step">
+        <span class="step-number">02</span><span class="step-symbol" aria-hidden="true">⌁</span>
+        <h3>Crear variables</h3>
+        <p>Resumir lluvia, temperatura y horas de humedad en ventanas recientes. Derivar distancia y tiempo desde focos conocidos, sin usar información futura.</p>
+      </article>
+      <article class="process-step">
+        <span class="step-number">03</span><span class="step-symbol" aria-hidden="true">⤢</span>
+        <h3>Preparar para SVM</h3>
+        <p>Imputar faltantes con una estrategia ajustada en entrenamiento; escalar variables numéricas y codificar clases. Ajustar el pipeline solo con datos de entrenamiento.</p>
+      </article>
+      <article class="process-step">
+        <span class="step-number">04</span><span class="step-symbol" aria-hidden="true">◉</span>
+        <h3>Estimar riesgo local</h3>
+        <p>Entrenar un SVM con kernel (por ejemplo, RBF) y evaluar la posibilidad de expansión hacia celdas cercanas dentro de un horizonte explícito.</p>
+      </article>
+    </div>
+    <div class="svm-callout">
+      <div class="callout-mark" aria-hidden="true">S.</div>
+      <div><span class="callout-label">¿Por qué una máquina de vectores de soporte?</span><p>Un SVM puede separar clases en espacios de variables complejos. La escala, el kernel y los parámetros <code>C</code> y <code>gamma</code> se seleccionan mediante validación cruzada, respetando la estructura espacial y temporal de los datos.</p></div>
+      <a href="https://scikit-learn.org/stable/modules/svm.html" target="_blank" rel="noreferrer" aria-label="Documentación de SVM en scikit-learn">↗</a>
+    </div>
+  </section>
+
+  <section class="validation-section section-pad" id="validacion">
+    <div class="section-kicker"><span>04</span><span class="kicker-line"></span><span>Validación transparente</span></div>
+    <div class="validation-grid">
+      <div>
+        <h2>La prueba no se<br><span>entrena.</span></h2>
+        <p class="validation-copy">El conjunto de test debe permanecer separado hasta el final. Para evitar una evaluación optimista, conviene reservar periodos o zonas completas y prevenir que observaciones vecinas de un mismo brote aparezcan en entrenamiento y test.</p>
+        <a class="text-link dark-link" href="https://doi.org/10.1007/s11540-011-9187-0" target="_blank" rel="noreferrer">Leer sobre epidemiología y control del tizón <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="validation-panel">
+        <div class="panel-header"><span class="panel-label">Protocolo propuesto</span><span class="status-pill"><span></span> Por ejecutar</span></div>
+        <div class="validation-row"><span class="validation-index">A</span><div><strong>Separación espacial y temporal</strong><small>Bloques geográficos y periodo futuro reservados.</small></div><span class="validation-mark">01</span></div>
+        <div class="validation-row"><span class="validation-index">B</span><div><strong>Ajuste sin fuga de información</strong><small>Imputación, escala y selección de hiperparámetros dentro de cada fold.</small></div><span class="validation-mark">02</span></div>
+        <div class="validation-row"><span class="validation-index">C</span><div><strong>Evaluación en test intacto</strong><small>Recall, precision, F1, PR-AUC y matriz de confusión.</small></div><span class="validation-mark">03</span></div>
+        <div class="validation-disclaimer"><strong>Sin métricas inventadas.</strong> El repositorio aún no contiene un dataset curado ni resultados de test; por eso no se muestran cifras de desempeño.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="model-section section-pad" id="modelo">
+    <div class="model-layout">
+      <div class="model-copy">
+        <div class="section-kicker light-kicker"><span>05</span><span class="kicker-line"></span><span>Explorador del modelo</span></div>
+        <h2>Del dato local<br><span>a una señal útil.</span></h2>
+        <p>Este formulario está preparado para conectarse con un servicio de inferencia. La predicción requiere un SVM entrenado, validado y desplegado; hasta entonces, no genera estimaciones ficticias.</p>
+        <div class="model-status"><span class="status-ring"></span><span>
+          {% if site.model_api_endpoint and site.model_api_endpoint != "" %}
+          <strong>Endpoint configurado</strong><small>Confirma que sirve un SVM entrenado y validado.</small>
+          {% else %}
+          <strong>Modo de integración</strong><small>Conecta la API para habilitar predicciones reales.</small>
+          {% endif %}
+        </span></div>
+        <div class="api-contract">
+          <span>POST JSON · entrada</span>
+          <code>origin_latitude, origin_longitude, target_latitude, target_longitude, mean_temp_c, rain_7d_mm, high_humidity_hours_7d, forecast_date</code>
+          <span class="api-response-label">Respuesta JSON · salida</span>
+          <code>{ risk, probability, horizon_days, model_version }</code>
+        </div>
+      </div>
+      <form class="prediction-card" id="prediction-form" data-endpoint="{{ site.model_api_endpoint | escape }}">
+        <div class="form-head"><div><span class="form-eyebrow">Escenario de riesgo</span><h3>Explora una zona</h3></div><span class="form-step">01 <i>/ 02</i></span></div>
+        <p class="form-description">Indica el foco conocido, la zona vecina y las condiciones recientes.</p>
+        <div class="form-grid">
+          <label>Latitud del foco
+            <input name="origin_latitude" type="number" step="any" min="-90" max="90" placeholder="-33.45" required>
+          </label>
+          <label>Longitud del foco
+            <input name="origin_longitude" type="number" step="any" min="-180" max="180" placeholder="-70.66" required>
+          </label>
+          <label>Latitud de zona vecina
+            <input name="target_latitude" type="number" step="any" min="-90" max="90" placeholder="-33.40" required>
+          </label>
+          <label>Longitud de zona vecina
+            <input name="target_longitude" type="number" step="any" min="-180" max="180" placeholder="-70.60" required>
+          </label>
+          <label>Temperatura media (°C)
+            <input name="mean_temp_c" type="number" step="any" min="-10" max="50" placeholder="18" required>
+          </label>
+          <label>Lluvia últimos 7 días (mm)
+            <input name="rain_7d_mm" type="number" step="any" min="0" max="2000" placeholder="24" required>
+          </label>
+          <label class="full-field">Horas con humedad relativa ≥ 90% (últimos 7 días)
+            <input name="high_humidity_hours_7d" type="number" step="any" min="0" max="168" placeholder="36" required>
+          </label>
+          <label class="full-field">Fecha de evaluación
+            <input name="forecast_date" type="date" required>
+          </label>
+        </div>
+        <button class="button button-primary predict-button" type="submit">Consultar riesgo <span aria-hidden="true">↗</span></button>
+        <div class="prediction-result" id="prediction-result" role="status" aria-live="polite" hidden></div>
+        <p class="form-footnote">La salida, una vez conectada, será una estimación experimental y no una recomendación fitosanitaria.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="team-section section-pad" id="equipo">
+    <div class="section-kicker"><span>06</span><span class="kicker-line"></span><span>Equipo de trabajo</span></div>
+    <div class="section-heading-row">
+      <h2>Distintas miradas,<br><span>un mismo cultivo.</span></h2>
+      <p class="section-lede">El proyecto reúne fitopatología, ciencia de datos y conocimiento del territorio.</p>
+    </div>
+    <div class="team-grid">
+      <article class="team-card">
+        <div class="team-photo"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=720&amp;q=85" alt="Retrato referencial para el perfil de investigación fitopatológica" loading="lazy"><span>01</span></div>
+        <p class="team-role">Fitopatología</p><h3>Nombre integrante</h3><p class="team-detail">Identificación del patógeno y curación de observaciones.</p>
+      </article>
+      <article class="team-card">
+        <div class="team-photo"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=720&amp;q=85" alt="Retrato referencial para el perfil de ciencia de datos" loading="lazy"><span>02</span></div>
+        <p class="team-role">Ciencia de datos</p><h3>Nombre integrante</h3><p class="team-detail">Preprocesamiento, entrenamiento y evaluación del SVM.</p>
+      </article>
+      <article class="team-card">
+        <div class="team-photo"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=crop&amp;w=720&amp;q=85" alt="Retrato referencial para el perfil de agricultura de precisión" loading="lazy"><span>03</span></div>
+        <p class="team-role">Agricultura de precisión</p><h3>Nombre integrante</h3><p class="team-detail">Contexto territorial y traducción de resultados a vigilancia.</p>
+      </article>
+    </div>
+    <p class="team-note">Perfiles, nombres y fotografías ilustrativos; reemplazar por los datos autorizados del equipo.</p>
+  </section>
+
+  <section class="reading-section section-pad" id="lecturas">
+    <div class="section-kicker"><span>+</span><span class="kicker-line"></span><span>Para seguir explorando</span></div>
+    <h2>Lecturas <span>recomendadas.</span></h2>
+    <div class="reading-list">
+      <a href="https://doi.org/10.1111/j.1364-3703.2007.00465.x" target="_blank" rel="noreferrer"><span>01</span><div><strong><em>Phytophthora infestans</em>: the plant (and R gene) destroyer</strong><small>William E. Fry · Molecular Plant Pathology · 2008</small></div><span class="reading-arrow">↗</span></a>
+      <a href="https://doi.org/10.1007/s11540-011-9187-0" target="_blank" rel="noreferrer"><span>02</span><div><strong>Epidemiology and Integrated Control of Potato Late Blight in Europe</strong><small>Cooke et al. · Potato Research · 2011</small></div><span class="reading-arrow">↗</span></a>
+    </div>
+    <p class="reading-footnote">Las referencias contextualizan la biología y epidemiología del tizón, incluyendo estudios en papa. La transferencia al tomate y a nuevas regiones debe validarse localmente.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">V</span><span>vigía<span class="brand-accent">.</span></span></a>
+  <p>Datos abiertos para anticipar riesgos, con rigor y transparencia.</p>
+  <a href="#inicio">Volver arriba ↑</a>
+</footer>

@@ -1,0 +1,10 @@
+title: Vigía Tizón
+description: Predicción del riesgo de expansión del tizón tardío del tomate con aprendizaje automático.
+lang: es
+theme: minima
+url: "https://diegostapy.github.io"
+baseurl: "/proyectoML2026"
+model_api_endpoint: ""
+markdown: kramdown
+plugins:
+  - jekyll-feed
